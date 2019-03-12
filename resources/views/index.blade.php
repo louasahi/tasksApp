@@ -47,6 +47,8 @@
 
                   {{ $tasks->links('vendor.pagination.materialize')}}
 
+      <br/><br/><br/><br/>
+
 
 <!--               <ul class="pagination">
                         <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
@@ -74,7 +76,7 @@
                 @csrf
         
         </form> 
-
+        <br/><br/>
           @isWorker
                    
       <form method="POST" action="{{ route('sendinvitation') }}" class="col s12">
@@ -95,10 +97,12 @@
       </form>
                 
           @endisWorker
+
+          <br/><br/><br/><br/>
                
           @isAdmin
             <ul class="collection with-header">
-                <li class="collection-header"><h4>Listes des collaborateurs</h4></li>
+                <li class="collection-header"><h4>Employés disponibles</h4></li>
                 @foreach($coworkers as $coworker)
                         
                   <li class="collection-item">
@@ -107,6 +111,7 @@
                  @endforeach 
               </ul>
             @endisAdmin
+            <br/><br/>
     
     @endsection
  

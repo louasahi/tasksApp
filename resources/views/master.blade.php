@@ -4,7 +4,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
-  <title>Application de gestion des tâches</title>
+  <title>Gestion collaborative de tâches</title>
 
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -32,7 +32,7 @@
                         <div class="collapsible-body">
                         @foreach($invitations as $invitation)
                     <p>
-                        <span class="blue-text"><b>{{ $invitation->worker->name }}</b></span>
+                        <span class="blue-text"><b>{{ $invitation->worker->name }}&nbsp;&nbsp;</b></span>
                         <a href="{{ route('acceptinvitation',['id'=>$invitation->id]) }}">Accepter</a>|<a href="{{ route('denyinvitation',['id'=>$invitation->id]) }}">Refuser</a>
                     </p>
                        @endforeach
